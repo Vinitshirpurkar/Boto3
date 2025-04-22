@@ -51,5 +51,4 @@ dynamodb_client.delete_item(
     }
 
 )
-
 print("deleted")
