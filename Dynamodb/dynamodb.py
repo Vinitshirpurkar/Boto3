@@ -35,15 +35,24 @@ table_name = 'University'
 dynamodb_client.put_item(
     TableName = table_name, 
     Item = {
-        'University': {'S': 'ABC'},
+        'University': {'S': 'ABC'}, 
         'City': {'S': 'CA'}, 
         'Rank': {'N': '1'},
         'Country': {'S': 'USA'}
     }
-
+)
+dynamodb_client.put_item(
+    TableName = table_name,
+    Item = {
+        'University': {'S': 'XYZ'},
+        'City': {'S': 'NY'},
+        'Rank': {'N': '2'},
+        'Country': {'S': 'USA'}
+    }
 )
 
-dynamodb_client.delete_item(
+print("added Item")
+""" dynamodb_client.delete_item(
     TableName = table_name,
     Key = {
         'University': {'S': 'ABC'},
@@ -51,4 +60,4 @@ dynamodb_client.delete_item(
     }
 
 )
-print("deleted")
+print("deleted") """
